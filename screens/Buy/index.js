@@ -70,7 +70,7 @@ const BuyScreen = () => {
     <>
       <ScrollView showsVerticalScrollIndicator={false} style={{ marginTop: high }}>
         {cartItems.map((item) => (
-          <ProductList item={item} />
+          <ProductList key={item.id} item={item} />
         ))}
       </ScrollView>
 

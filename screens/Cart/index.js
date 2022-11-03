@@ -19,8 +19,6 @@ const CartScreen = () => {
   const cartItems = useSelector((state) => state.Cart.cart);
   const [total, settotal] = useState(0);
 
-  console.log(cartItems);
-
   useEffect(() => {
     let totalCurrent = 0;
     cartItems.map((item) => {
