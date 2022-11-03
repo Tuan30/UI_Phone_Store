@@ -2,12 +2,18 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 
 import styles from "./styles";
+import { PaymentMomo } from "../../components";
 
 const PayScreen = () => {
+
+  const handlePaymentMomo = () => {
+    return <PaymentMomo />
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.pay}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handlePaymentMomo}>
           <View style={styles.box}>
             <Image
               style={styles.img}

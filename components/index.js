@@ -17,6 +17,7 @@ import RatingComponent from "./rating";
 import InputStyle from "./inputStyle";
 import CategoryImage from "./categoryImage";
 import HeaderNameScreen from "./headerNameScreen";
+import PaymentMomo from "./paymentMomo";
 
 export {
   Header,
@@ -38,4 +39,5 @@ export {
   HeaderSearch,
   CategoryImage,
   HeaderNameScreen,
+  PaymentMomo
 };

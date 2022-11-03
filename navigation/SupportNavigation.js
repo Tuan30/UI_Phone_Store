@@ -20,7 +20,7 @@ const SupportStackNavigation = () => {
         name="SupportScreen"
         component={SupportScreen}
         options={{
-          header: () => <HeaderNoSearch icon="call" name={"Hỗ trợ"} product />,
+          header: () => <HeaderNoSearch name={"Hỗ trợ"} product />,
         }}
       />
     </Stack.Navigator>
