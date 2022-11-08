@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { Product } from "../../components";
 
 import styles from "./styles";
+import { CheckFavorite } from "../../common";
 
 const FavoriteScreen = () => {
   const product = useSelector((state) => state.Product.items);
@@ -24,17 +25,23 @@ const FavoriteScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.aside}>
-        <FlatList
-          showsVerticalScrollIndicator={false}
-          data={items}
-          renderItem={showItems}
-          keyExtractor={(item) => item.name.toString()}
-          numColumns={2}
-        />
-      </View>
-    </View>
+    <>
+      {items.length > 0 ? (
+        <View style={styles.container}>
+          <View style={styles.aside}>
+            <FlatList
+              showsVerticalScrollIndicator={false}
+              data={items}
+              renderItem={showItems}
+              keyExtractor={(item) => item.name.toString()}
+              numColumns={2}
+            />
+          </View>
+        </View>
+      ) : (
+        <CheckFavorite />
+      )}
+    </>
   );
 };
 

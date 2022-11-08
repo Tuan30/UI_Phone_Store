@@ -7,6 +7,7 @@ import {
   CartScreen,
   FillterScreen,
   LoginScreen,
+  OrderScreen,
   PayScreen,
   ProductScreen,
   SearchScreen,
@@ -53,6 +54,14 @@ const TabStackScreen = () => {
         options={{
           header: () => <HeaderScreen product right={false} />,
           title: "Gio Hang",
+        }}
+      />
+      <Stack.Screen 
+        name="AllOrder"
+        component={OrderScreen}
+        options={{
+          header: () => <HeaderScreen product right={false} />,
+          title: "Đặt hàng",
         }}
       />
       <Stack.Screen

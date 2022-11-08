@@ -14,6 +14,7 @@ import SearchScreen from "./Search";
 import CategoryScreen from "./Category";
 import LoginScreen from "./Login";
 import PayScreen from "./Payment";
+import OrderScreen from "./Order";
 
 export {
   HomeScreen,
@@ -31,5 +32,6 @@ export {
   SearchScreen,
   CategoryScreen,
   LoginScreen,
-  PayScreen
+  PayScreen,
+  OrderScreen
 };

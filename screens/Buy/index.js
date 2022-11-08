@@ -22,6 +22,7 @@ import { fetchAsyncBuy } from "../../store/slices/buy";
 import { showToast } from "../../help/showToast";
 
 import styles from "./styles";
+import { RemoveAll } from "../../store/slices/cart";
 
 const BuyScreen = () => {
   const router = useRoute();
@@ -36,7 +37,7 @@ const BuyScreen = () => {
 
   const handleSuccess = () => {
     setVisible(false);
-    dispatch(RemoveAll());
+    dispatch(RemoveAll())
     navigation.navigate("Home");
   };
 

@@ -37,6 +37,7 @@ const Category = () => {
       </TouchableOpacity>
     );
   };
+
   return (
     <View style={styles.container}>
       <View style={styles.title}>

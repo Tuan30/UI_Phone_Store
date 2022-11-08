@@ -16,9 +16,28 @@ const styles = StyleSheet.create({
   img: {
     width: "100%",
   },
+  viewImg:{
+    alignItems: "center",
+  },
+  imgIcon:{
+    justifyContent: "center",
+    width: 150,
+    height: 150,
+    borderRadius: '100%',
+    marginBottom: 20
+  },
+
+  textRigiter: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 20
+  },
   background: {
     flex: 1,
     position: "absolute",
+  },
+  text:{
+    fontSize: 16
   },
   input: {
     shadowColor: "#000",
@@ -38,23 +57,38 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: COLORS.black,
     width: "100%",
-    borderRadius: 3,
     justifyContent: "center",
     alignItems: "center",
     paddingVertical: 15,
+    borderRadius: 20
   },
   buttonText: {
-    color: COLORS.black,
+    color: COLORS.white,
     fontSize: 20,
-    backgroundColor: COLORS.white,
-    paddingHorizontal: 40,
-    paddingVertical: 10,
-    borderRadius: 10
   },
   icon: {
     position: "absolute",
     right: 15,
     top: 15,
+  },
+  loginApp:{
+    marginTop: 20,
+  },
+  login:{
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor:COLORS.white,
+    marginBottom: 10,
+    paddingHorizontal: 30,
+    justifyContent: 'space-between',
+    borderRadius: 20,
+    paddingVertical: 10
+  },
+  imgIconLogin:{
+    justifyContent: "center",
+    width: 50,
+    height: 50,
+    borderRadius: '100%',
   },
 });
 

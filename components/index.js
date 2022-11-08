@@ -18,6 +18,8 @@ import InputStyle from "./inputStyle";
 import CategoryImage from "./categoryImage";
 import HeaderNameScreen from "./headerNameScreen";
 import PaymentMomo from "./paymentMomo";
+import CheckCart from "./checkCart";
+import ShowProduct from "./showProduct";
 
 export {
   Header,
@@ -39,5 +41,7 @@ export {
   HeaderSearch,
   CategoryImage,
   HeaderNameScreen,
-  PaymentMomo
+  PaymentMomo,
+  CheckCart,
+  ShowProduct
 };

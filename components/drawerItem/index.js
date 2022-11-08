@@ -25,7 +25,11 @@ const DrawerItemComponent = ({ name, setActive, active }) => {
       icon = "ios-cart-outline";
       label = "Thông tin giỏ hàng";
       break;
-    case "Info":
+    case "AllOrder":
+      icon = "ios-cart-outline";
+      label = "Tất cả đơn hàng";
+      break;
+      case "Info":
       icon = "ios-person-outline";
       label = "Quản lí thông tin";
       break;

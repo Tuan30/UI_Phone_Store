@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Rating } from "@rneui/themed";
+import { Rating } from "react-native-ratings";
 import { COLORS } from "../../contains";
 
-const RatingComponent = ({ data, product = true }) => {
-  const [rating, setRating] = useState(3);
+const RatingComponent = ({ data, product = false }) => {
 
   const ratingCompleted = (rating) => {
     console.log(rating);
@@ -16,7 +15,7 @@ const RatingComponent = ({ data, product = true }) => {
       type="custom"
       startingValue={data}
       ratingCount={5}
-      imageSize={10}
+      imageSize={20}
       onFinishRating={ratingCompleted}
       readonly
       tintColor={color}

@@ -8,8 +8,9 @@ import {
   TouchableHighlight,
   TouchableOpacity,
   ImageBackground,
+  Image,
 } from "react-native";
-import { COLORS, MESSAGE } from "../../contains";
+import { COLORS, IMAGES, MESSAGE } from "../../contains";
 import { FontAwesome } from "@expo/vector-icons";
 
 import styles from "./styles";
@@ -37,18 +38,23 @@ const LoginScreen = () => {
     });
   };
 
+  const handleRighiter =() => {
+
+  }
+
   const handleShowPass = () => {
     setShowPass(!showPass);
   };
 
   return (
     <>
-      <ImageBackground
-        style={styles.container}
-        source={{
-          uri: "https://preview.redd.it/ko1shs61yhm91.jpg?auto=webp&s=f109167623d5883ba5db3ac297b5f9d508f005c7",
-        }}
-      >
+      <View style={styles.container}>
+        <View style={styles.viewImg}>
+          <Image
+            style={styles.imgIcon}
+            source={IMAGES.avatar}
+          />
+        </View>
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View>
             <View style={styles.input}>
@@ -60,17 +66,13 @@ const LoginScreen = () => {
             </View>
             <View style={styles.input}>
               <TextInput
-                placeholder="Password..."
+                placeholder="Mật khẩu..."
                 secureTextEntry={showPass}
                 value={data.password}
                 onChangeText={(val) => setData({ ...data, password: val })}
               />
               <TouchableOpacity onPress={handleShowPass} style={styles.icon}>
-                <FontAwesome
-                  name={!showPass ? "eye" : "eye-slash"}
-                  size={18}
-                  color="black"
-                />
+                <FontAwesome name={!showPass ? "eye" : "eye-slash"} size={18} />
               </TouchableOpacity>
             </View>
 
@@ -84,7 +86,27 @@ const LoginScreen = () => {
             </TouchableHighlight>
           </View>
         </TouchableWithoutFeedback>
-      </ImageBackground>
+
+        <View style={styles.textRigiter}>
+          <TouchableOpacity>
+            <Text style={styles.text}>Quên mật khẩu</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleRighiter}>
+            <Text style={styles.text}>Đăng kí</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.loginApp}>
+          <TouchableOpacity style={styles.login}>
+            <Text>Đăng nhập bằng Google</Text>
+            <Image style={styles.imgIconLogin} source={IMAGES.loginGoogle}/>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.login}>
+            <Text>Đăng nhập bằng Facebook</Text>
+            <Image style={styles.imgIconLogin} source={IMAGES.loginFacebook}/>
+          </TouchableOpacity>
+        </View>
+      </View>
     </>
   );
 };

@@ -53,7 +53,7 @@ const CategorySpecial = ({ nameCategory }) => {
             {item.name}
           </Text>
           <Text numberOfLines={2}>{item.summary}</Text>
-          {/* <Text numberOfLines={1}><RatingComponent data={item.rate} /></Text> */}
+          <Text numberOfLines={1}><RatingComponent data={item.rate} /></Text>
           <Text numberOfLines={1} style={[styles.infoPrice]}>
             {FormatPrice(item.price)}
           </Text>

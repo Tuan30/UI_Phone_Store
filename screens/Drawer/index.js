@@ -33,6 +33,11 @@ const DrawerContent = () => {
           setActive={(value) => setActive(value)}
           active={active}
         />
+        <DrawerItemComponent 
+          name={"AllOrder"}
+          setActive={(value) => setActive(value)}
+          active={active}
+        />
         <DrawerItemComponent
           name={"Info"}
           setActive={(value) => setActive(value)}

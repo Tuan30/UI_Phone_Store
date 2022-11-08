@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   fromTotal: {
-    backgroundColor: COLORS.white,
     paddingHorizontal: 20,
     borderTopWidth: 1,
     borderTopColor: COLORS.main
