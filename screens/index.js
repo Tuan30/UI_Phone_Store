@@ -15,6 +15,7 @@ import CategoryScreen from "./Category";
 import LoginScreen from "./Login";
 import PayScreen from "./Payment";
 import OrderScreen from "./Order";
+import OrderItemScreen from "./Order_Items";
 
 export {
   HomeScreen,
@@ -33,5 +34,6 @@ export {
   CategoryScreen,
   LoginScreen,
   PayScreen,
-  OrderScreen
+  OrderScreen,
+  OrderItemScreen
 };

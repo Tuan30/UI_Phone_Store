@@ -20,6 +20,8 @@ import HeaderNameScreen from "./headerNameScreen";
 import PaymentMomo from "./paymentMomo";
 import CheckCart from "./checkCart";
 import ShowProduct from "./showProduct";
+import ProductListOrder from "./productListOrder";
+import DetailOrder from "./detailOrder";
 
 export {
   Header,
@@ -43,5 +45,7 @@ export {
   HeaderNameScreen,
   PaymentMomo,
   CheckCart,
-  ShowProduct
+  ShowProduct,
+  ProductListOrder,
+  DetailOrder
 };

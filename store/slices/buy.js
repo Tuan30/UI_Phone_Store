@@ -25,7 +25,7 @@ const buySlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchAsyncBuy.fulfilled, (state, action) => {
-        console.log("action", action);
+        state.buy = action.payload
       })
       .addCase(fetchAsyncListSingle.fulfilled, (state, action) => {
         console.log("action", action);

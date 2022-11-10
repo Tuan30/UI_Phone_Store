@@ -8,6 +8,7 @@ import AuthReducer from "./slices/auth";
 import CartReducer from "./slices/cart";
 import UserReducer from "./slices/user";
 import BuyReducer from "./slices/buy";
+import OrderReducer from "./slices/order";
 
 const store = configureStore({
   reducer: {
@@ -17,6 +18,7 @@ const store = configureStore({
     Fillter: FillterReducer,
     Favorite: FavoriteReducer,
     Auth: AuthReducer,
+    Order: OrderReducer,
     Cart: CartReducer,
     User: UserReducer,
     Buy: BuyReducer,

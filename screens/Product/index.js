@@ -33,10 +33,8 @@ const ProductScreen = () => {
   const dispatch = useDispatch();
   const route = useRoute();
   const { id } = route.params;
-  const [isSeeMore, setIsSeeMore] = useState(false);
 
   const product = useSelector((state) => state.Product.product);
-  const productInCategory = useSelector((state) => state.Categories.products);
 
   useEffect(() => {
     dispatch(fetchSingleProduct({ id })).then((respone) => {

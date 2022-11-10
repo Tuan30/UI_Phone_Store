@@ -11,6 +11,7 @@ import {
   PayScreen,
   ProductScreen,
   SearchScreen,
+  OrderItemScreen
 } from "../screens";
 import { Header, HeaderNoSearch, HeaderScreen, HeaderSearch } from "../components";
 
@@ -63,6 +64,10 @@ const TabStackScreen = () => {
           header: () => <HeaderScreen product right={false} />,
           title: "Đặt hàng",
         }}
+      />
+      <Stack.Screen 
+        name="OrderItemScreen"
+        component={OrderItemScreen}
       />
       <Stack.Screen
         name="BuyScreen"

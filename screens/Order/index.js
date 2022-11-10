@@ -1,21 +1,28 @@
 import { View, FlatList } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './styles'
-import { useSelector } from 'react-redux'
-import { ProductList } from '../../components'
+import { useDispatch, useSelector } from 'react-redux'
+import {  ProductListOrder } from '../../components'
+import { fetchAsyncOrder } from '../../store/slices/order'
 
 const OrderScreen = () => {
 
-  const cartItems = useSelector((state) => state.Cart.cart);
+  const orderItmes = useSelector((state) => state.Order.order)
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchAsyncOrder())
+  })
 
   const renderItem = ({item}) => {
-    return <ProductList item={item} cart/>
+    return <ProductListOrder item={item}/>
   }
 
   return (
     <View style={styles.container}>
       <FlatList 
-        data={cartItems}
+        data={orderItmes}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
       />
