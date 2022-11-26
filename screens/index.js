@@ -16,6 +16,9 @@ import LoginScreen from "./Login";
 import PayScreen from "./Payment";
 import OrderScreen from "./Order";
 import OrderItemScreen from "./Order_Items";
+import SignupScreen from "./Signup";
+import ShipScreen from "./Ship";
+import ChatApp from "./Chat";
 
 export {
   HomeScreen,
@@ -35,5 +38,8 @@ export {
   LoginScreen,
   PayScreen,
   OrderScreen,
-  OrderItemScreen
+  OrderItemScreen,
+  SignupScreen,
+  ShipScreen,
+  ChatApp,
 };

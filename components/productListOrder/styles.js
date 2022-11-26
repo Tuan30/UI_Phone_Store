@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
   },
   contentInfo: {
     flex: 1.5,
+    marginTop: 15,
     justifyContent: "space-evenly",
   },
   contentMore: {

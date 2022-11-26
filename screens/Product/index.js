@@ -36,6 +36,8 @@ const ProductScreen = () => {
 
   const product = useSelector((state) => state.Product.product);
 
+  console.log("product", product)
+
   useEffect(() => {
     dispatch(fetchSingleProduct({ id })).then((respone) => {
       if (!respone.error) {

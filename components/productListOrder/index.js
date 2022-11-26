@@ -24,6 +24,7 @@ const ProductListOrder = ({ item }) => {
       <View style={styles.content}>
         <View style={styles.contentInfo}>
           <Text numberOfLines={1} style={styles.contentName}>ID Đơn hàng: {item.id}</Text>
+          <Text numberOfLines={1} style={styles.contentInfo}>Mã code: {item.code}</Text>
           <Text numberOfLines={1} style={styles.contentPrice}>Giá tiền : {FormatPrice(item.amount)}</Text>
         </View>
       </View>

@@ -95,13 +95,11 @@ const ShowProduct = ({ product }) => {
           <Text style={styles.title}> Sản phẩm liên quan </Text>
           <View style={styles.boxProduct}>
             <FlatList
-              showsVerticalScrollIndicator={false}
               data={productInCategory}
               renderItem={showItems}
               keyExtractor={(item) => item.id.toString()}
-              horizontal={true}
-              showsHorizontalScrollIndicator={false}
-            />
+              horizontal={true}            
+              />
           </View>
         </View>
         <View>

@@ -17,13 +17,14 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   viewImg:{
+    position: 'relative',
     alignItems: "center",
   },
   imgIcon:{
     justifyContent: "center",
     width: 150,
     height: 150,
-    borderRadius: '100%',
+    borderRadius: 100,
     marginBottom: 20
   },
 
@@ -53,6 +54,14 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     borderRadius: 15,
     marginBottom: 30,
+  },
+  ImgNoen:{
+    position : "absolute",
+    height: 160,
+    width: 160,
+    bottom: 110,
+    resizeMode: 'cover',
+    left: 114
   },
   button: {
     backgroundColor: COLORS.black,
@@ -88,7 +97,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: 50,
     height: 50,
-    borderRadius: '100%',
+    borderRadius: 100,
   },
 });
 

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ReactNative_AppStore",
-    "slug": "ReactNative_AppStore",
+    "name": "Phone Store",
+    "slug": "Phone-Store",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/avatar.png",
@@ -18,9 +18,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "y"
     },
     "android": {
+      "version": 1 ,
+      "package": "com.phonestore.PhoneStore",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -28,6 +31,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "85e26d7d-37e1-48e6-9f59-12b7786f9aa7"
+      }
     }
   }
 }

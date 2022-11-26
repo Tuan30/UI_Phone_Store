@@ -6,7 +6,7 @@ const height = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 30,
+    marginBottom: 120,
   },
   title: {
     fontWeight: "bold",

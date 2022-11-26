@@ -6,6 +6,7 @@ import {
   ScrollView,
   TouchableOpacity,
   FlatList,
+  Image,
 } from "react-native";
 import {
   Button,
@@ -23,6 +24,7 @@ import { showToast } from "../../help/showToast";
 
 import styles from "./styles";
 import { RemoveAll } from "../../store/slices/cart";
+import { SelectList } from "react-native-dropdown-select-list";
 
 const BuyScreen = () => {
   const router = useRoute();
@@ -35,6 +37,15 @@ const BuyScreen = () => {
 
   const hideDialog = () => setVisible(false);
 
+  const [selected, setSelected] = React.useState("Thanh toan truc tiep");
+  
+  const data = [
+      {key:'1', value:'Thanh toán trực tuyến'},
+      {key:'2', value:'Thanh toán Momo'},
+      {key:'3', value:'Thanh toán Zalo Pay'},
+      {key:'4', value:'Thanh toán Pay Pal'},
+  ]
+
   const handleSuccess = () => {
     setVisible(false);
     dispatch(RemoveAll())
@@ -45,6 +56,9 @@ const BuyScreen = () => {
     navigation.navigate("PayScreen");
   };
 
+  const handleShip =() => {
+    navigation.navigate("ShipScreen");
+  }
   const handleBuy = () => [
     dispatch(fetchAsyncBuy({ data: cartItems })).then((res) => {
       if (!res.error) {
@@ -60,16 +74,9 @@ const BuyScreen = () => {
     return <CheckFavorite />;
   }
 
-  const high = () => {
-    const [high, setHigh] = useState(220);
-    if (item.length != 1) {
-       setHigh = auto
-    }
-  };
-
   return (
     <>
-      <ScrollView showsVerticalScrollIndicator={false} style={{ marginTop: high }}>
+      <ScrollView showsVerticalScrollIndicator={false}>
         {cartItems.map((item) => (
           <ProductList key={item.id} item={item} />
         ))}
@@ -80,13 +87,23 @@ const BuyScreen = () => {
           <InputStyle name={"Mã giảm giá ( nếu có )"} />
           <Text style={styles.salePrice}>Bạn đã được giảm:</Text>
         </View>
-        <View style={styles.form}>
-          <InputStyle name={"Phí vận chuyển"} value={"35k"} />
+        <View style={styles.formShip}>
+          <Text style={styles.text}>Phí vận chuyển </Text>
+          <TouchableOpacity onPress={handleShip}>
+            <Text style={styles.text}>Xem thêm</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.formText}>
           <Text style={styles.text}>Phương thức thanh toán</Text>
           <TouchableOpacity onPress={handlePay}>
-            <Text style={styles.salePrice}>Thanh toán trực tiếp</Text>
+            <SelectList 
+              setSelected={(val) => setSelected(val)} 
+              data={data}
+              save="value"
+              placeholder="Thanh toán trực tuyến"
+              boxStyles={styles.boxSlider}
+              search={false}
+            />
           </TouchableOpacity>
         </View>
         <View style={styles.sumALl}>

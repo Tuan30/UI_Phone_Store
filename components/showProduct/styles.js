@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 26,
     marginBottom: 10,
-    fontFamily: "Cochin",
+    fontFamily: "Inter_900Black",
   },
   view_main: {
     marginBottom: 40,

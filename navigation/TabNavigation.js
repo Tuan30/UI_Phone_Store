@@ -11,13 +11,31 @@ import {
   PayScreen,
   ProductScreen,
   SearchScreen,
-  OrderItemScreen
+  OrderItemScreen,
+  SignupScreen,
+  ShipScreen,
+  ChatApp,
 } from "../screens";
-import { Header, HeaderNoSearch, HeaderScreen, HeaderSearch } from "../components";
+import AppLoading from "expo-app-loading";
+import { HeaderScreen, HeaderSearch } from "../components";
+import {
+  Inter_900Black,
+  Allura_400Regular,
+  useFonts,
+} from "@expo-google-fonts/dev";
 
 const Stack = createStackNavigator();
 
 const TabStackScreen = () => {
+  let [fontsLoaded] = useFonts({
+    Inter_900Black,
+    Allura_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
     <Stack.Navigator
       screenOptions={{
@@ -54,10 +72,10 @@ const TabStackScreen = () => {
         component={CartScreen}
         options={{
           header: () => <HeaderScreen product right={false} />,
-          title: "Gio Hang",
+          title: "Giỏ hàng",
         }}
       />
-      <Stack.Screen 
+      <Stack.Screen
         name="AllOrder"
         component={OrderScreen}
         options={{
@@ -65,10 +83,7 @@ const TabStackScreen = () => {
           title: "Đặt hàng",
         }}
       />
-      <Stack.Screen 
-        name="OrderItemScreen"
-        component={OrderItemScreen}
-      />
+      <Stack.Screen name="OrderItemScreen" component={OrderItemScreen} />
       <Stack.Screen
         name="BuyScreen"
         component={BuyScreen}
@@ -87,10 +102,25 @@ const TabStackScreen = () => {
         component={LoginScreen}
         options={{ headerShown: false }}
       />
-      <Stack.Screen 
+      <Stack.Screen
+        name="Signup"
+        component={SignupScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
         name="PayScreen"
         component={PayScreen}
-        options={{title: ""}}
+        options={{ title: "" }}
+      />
+      <Stack.Screen
+        name="ShipScreen"
+        component={ShipScreen}
+        options={{ title: "Vận chuyển" }}
+      />
+      <Stack.Screen
+        name="ChatScreen"
+        component={ChatApp}
+        options={{ title: "Hỗ trợ" }}
       />
     </Stack.Navigator>
   );

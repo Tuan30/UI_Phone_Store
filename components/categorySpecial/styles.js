@@ -13,9 +13,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   titleText: {
-    fontFamily: "Cochin",
-    fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "Allura_400Regular",
+    fontSize: 25,
   },
   title: {
     marginBottom: 10,

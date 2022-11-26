@@ -5,14 +5,19 @@ import styles from "./styles";
 
 const COMMENT = [
   {
-    name: "User1",
-    avatar: require("../../assets/images/slider/1.jpg"),
-    data: "hàng dùng rất ok ",
+    name: "Tuấn Nguyễn",
+    avatar: require("../../assets/images/login/avatar.jpg"),
+    data: "Sản phẩm rất chất lượng đáng đồng tiền",
   },
   {
-    name: "User2",
-    avatar: require("../../assets/images/slider/1.jpg"),
-    data: "hàng dùng rất ok ",
+    name: "Thu Hương",
+    avatar: require("../../assets/images/login/avatar2.jpg"),
+    data: "Chất lượng tốt ",
+  },
+  {
+    name: "Đức Toàn",
+    avatar: require("../../assets/images/login/avatar3.jpg"),
+    data: "Chất lượng tốt ",
   },
 ];
 

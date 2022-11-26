@@ -17,8 +17,7 @@ const styles = StyleSheet.create({
   text: {
     marginVertical: 10,
     fontSize: 20,
-    fontWeight: "bold",
-    fontFamily: "Cochin",
+    fontFamily: "Inter_900Black",
   },
 
   title: {

@@ -4,10 +4,12 @@ import styles from "./styles";
 import { useSelector } from "react-redux";
 import { CheckLogin } from "../../common";
 
-const SupportScreen = () => {
+const SupportScreen = ({ navigation }) => {
   const isLogin = useSelector((state) => state.Auth.isLogin);
 
-  const showSupport = () => {};
+  const showSupport = () => {
+    navigation.navigate("ChatScreen");
+  };
 
   return (
     <>

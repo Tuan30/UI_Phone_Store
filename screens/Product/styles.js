@@ -63,10 +63,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   title: {
-    fontWeight: "bold",
     fontSize: 26,
     marginBottom: 10,
-    fontFamily: "Cochin",
+    fontFamily: "Allura_400Regular",
   },
   view_main: {
     marginBottom: 40,

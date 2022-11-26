@@ -28,8 +28,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
     color: COLORS.primary,
-    fontFamily: "Cochin",
-    fontWeight: "bold",
+    fontFamily: "Inter_900Black",
   },
   titleNot: {
     fontSize: 30,

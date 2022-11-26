@@ -18,11 +18,40 @@ import { fetchAsyncLogin } from "../../store/slices/auth";
 import { useDispatch } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
 import { showToast } from "../../help/showToast";
+import * as WebBrowser from 'expo-web-browser';
+import * as Google from 'expo-auth-session/providers/google';
+
+WebBrowser.maybeCompleteAuthSession();
 
 const LoginScreen = () => {
   const [showPass, setShowPass] = useState(true);
   const dispatch = useDispatch();
   const navigation = useNavigation();
+  const [accessToken, setAccessToken] = useState()
+  const [userInfo, setUserInfo] = useState()
+  
+  const [request, response, promptAsync] = Google.useAuthRequest({
+    androidClientId:"527519901012-rmd9v6ec4b5t0cvt50n5k45irt0ut6a6.apps.googleusercontent.com",
+    iosClientId:"527519901012-39ifv6h82kugkep7ihanasrvpkgi2646.apps.googleusercontent.com",
+    redirectUri:"com.phonestore.app:redirect_uri_path",
+    clientId:'CLIENT_ID',
+  })
+
+  useEffect(() => {
+    if(response?.type === 'success'){
+      setAccessToken(response.authentication.accessToken)
+    }
+  }, [response])
+
+  async function getUserData() {
+    let userInfoResponse = await fetch("Loi", {
+      headers: {Authorization: `Bearer ${accessToken}`}
+    });
+
+    userInfoResponse.json.then(data => {
+      setUserInfo(data)
+    })
+  }
 
   const [data, setData] = useState({
     email: "",
@@ -39,7 +68,7 @@ const LoginScreen = () => {
   };
 
   const handleRighiter =() => {
-
+    navigation.navigate("Signup")
   }
 
   const handleShowPass = () => {
@@ -54,6 +83,7 @@ const LoginScreen = () => {
             style={styles.imgIcon}
             source={IMAGES.avatar}
           />
+          <Image style={styles.ImgNoen} source={IMAGES.noen} />
         </View>
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View>
@@ -97,7 +127,9 @@ const LoginScreen = () => {
         </View>
 
         <View style={styles.loginApp}>
-          <TouchableOpacity style={styles.login}>
+          <TouchableOpacity style={styles.login}
+            onPress={accessToken ? getUserData : () => {promptAsync({showInRevent: true})}}
+          >
             <Text>Đăng nhập bằng Google</Text>
             <Image style={styles.imgIconLogin} source={IMAGES.loginGoogle}/>
           </TouchableOpacity>

@@ -36,8 +36,7 @@ const styles = StyleSheet.create({
   title: {
     color: COLORS.white,
     fontSize: 18,
-    fontWeight: "bold",
-    fontFamily: "Cochin",
+    fontFamily: "Allura_400Regular",
   },
 });
 

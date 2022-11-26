@@ -5,5 +5,7 @@ export const IMAGES = {
   nodata: require("../assets/images/nodata.png"),
   iphone14: require("../assets/images/Iphone 14.png"),
   loginGoogle: require("../assets/images/login/google.png"),
-  loginFacebook: require("../assets/images/login/facebook.png")
+  loginFacebook: require("../assets/images/login/facebook.png"),
+  noen: require("../assets/283430250019211.png"),
+  backgroud_login: require("../assets/backgroid.png")
 };

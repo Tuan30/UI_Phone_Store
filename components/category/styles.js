@@ -33,9 +33,8 @@ const styles = StyleSheet.create({
     marginTop: 6,
   },
   titleText: {
-    fontSize: 20,
-    fontWeight: "bold",
-    fontFamily: "Cochin",
+    fontSize: 30,
+    fontFamily: "Allura_400Regular",
   },
   imgItem: {
     width: "80%",

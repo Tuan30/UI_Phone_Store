@@ -18,9 +18,18 @@ const styles = StyleSheet.create({
   showProduct: {
     
   },
+  boxSlider:{
+    marginHorizontal: 5,
+  },
   form: {
     paddingHorizontal: 20,
     marginTop: 40,
+  },
+  formShip:{
+    paddingHorizontal: 20,
+    marginTop: 40,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   formText:{
     marginHorizontal: 20,
@@ -29,7 +38,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   text:{
-    fontSize: 16
+    fontSize: 16,
+    marginTop: 10
   },
   salePrice: {
     color: COLORS.main,
